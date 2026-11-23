@@ -32,7 +32,7 @@ const photo = {
   hero: "/img/Hero-slider.png",
   hospital: "/img/about.png",   // renamed file
   news: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85",
-  cmd: "/img/cmd.jpeg",
+  cmd: "/img/CMD.jpeg",
   hand: "/img/mockups.png",
 };
 
