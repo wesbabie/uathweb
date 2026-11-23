@@ -34,8 +34,9 @@ const photo = {
   news: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85",
   leader:
     "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=700&q=85",
-  phone:
-    "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=700&q=85",
+  cmd: "img/cmd.jpeg",
+  hand:
+    "img/mockups.png",
   map: "https://images.unsplash.com/photo-1524666041070-9b876833b3c4?auto=format&fit=crop&w=900&q=85",
 };
 
@@ -410,7 +411,7 @@ export default function Home() {
 
   <div className="leader-photo">
     <Image
-      src="/img/cmd.JPEG"
+      src={photo.cmd}
       alt="Professor Thairu Yunusa, Chief Managing Director"
       fill
       sizes="(max-width: 800px) 100vw, 420px"
