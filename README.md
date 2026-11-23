@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # UATH Landing Page — Next.js
 
 A responsive homepage recreation based on the supplied UATH landing-page screenshot.
@@ -29,3 +30,6 @@ The screenshot does not contain the original image files or editable text. This 
 Replace these with approved UATH assets and verified website content before publishing. Update the contact details and patient portal destination as well.
 
 The mobile navigation button is currently a visual placeholder; connect it to a menu/drawer before production.
+=======
+# uathweb
+>>>>>>> aafc0cb37179abb8d86b05e9e5ffd1cb8469468a
