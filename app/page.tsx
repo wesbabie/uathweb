@@ -30,7 +30,7 @@ import {
 
 const photo = {
   hero: "/img/Hero-slider.png",
-  hospital: "/img/about.png",   // renamed file
+  hospital: "/img/about.png", // renamed file
   news: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85",
   cmd: "/img/CMD.jpeg",
   hand: "/img/mockups.png",
@@ -154,13 +154,13 @@ export default function Home() {
           <div className="container nav-wrap">
             <a className="brand" href="#" aria-label="UATH home">
               <Image
-  src="/img/logo-header.png"
-  alt="UATH logo"
-  width={186}
-  height={50}
-  className="brand-mark"
-  priority
-/>
+                src="/img/logo-header.png"
+                alt="UATH logo"
+                width={186}
+                height={50}
+                className="brand-mark"
+                priority
+              />
             </a>
             <nav className="desktop-nav">
               <a href="#home">Home</a>
@@ -174,7 +174,10 @@ export default function Home() {
               <a href="#contact">Contact</a>
             </nav>
             <a className="nav-portal" href="#portal">
-              <span className="status-dot" /> Patient Portal
+              <span className="utility-inner"> 
+              <Phone/>
+              Patient Portal
+              </span>
             </a>
             <button className="mobile-menu" aria-label="Open menu">
               <Menu />
@@ -247,20 +250,23 @@ export default function Home() {
                 the development of the next generation of healthcare
                 professionals.
               </p>
-             
             </div>
             <div className="about-image image-frame">
               <img src={photo.hospital} alt="Modern hospital building" />
             </div>
           </div>
 
-          <div className="department-heading" id="departments">
-           
-          </div>
+          <div className="department-heading" id="departments"></div>
           <div className="department-grid">
             <div>
               <SectionLabel>Find a department</SectionLabel>
-              <h3 style={{ fontSize: "1.8rem", lineHeight: "1.3", fontWeight: "600" }}>
+              <h3
+                style={{
+                  fontSize: "1.8rem",
+                  lineHeight: "1.3",
+                  fontWeight: "600",
+                }}
+              >
                 Explore Our
                 <br />
                 Departments
@@ -337,16 +343,15 @@ export default function Home() {
             </a>
           </div>
           <div className="portal-visual">
-          {/* change hand.png to your actual filename in public/img/ */}
-          <Image
-            src="/img/mockups.png"
-            alt="UATH patient portal app on a phone"
-            fill
-            sizes="(max-width: 800px) 100vw, 50vw"
-            className="portal-image"
-          />
-        </div>
-
+            {/* change hand.png to your actual filename in public/img/ */}
+            <Image
+              src="/img/mockups.png"
+              alt="UATH patient portal app on a phone"
+              fill
+              sizes="(max-width: 800px) 100vw, 50vw"
+              className="portal-image"
+            />
+          </div>
         </div>
       </section>
 
@@ -392,35 +397,38 @@ export default function Home() {
             </div>
           </div>
 
-         <div className="leadership">
-  <div className="leadership-copy">
-    <p className="leadership-eyebrow">Leadership and Accountability</p>
-    <h2>Guided By A Commitment To Better Healthcare</h2>
-    <p className="leadership-text">
-      The University of Abuja Teaching Hospital is committed to delivering
-      healthcare, supporting medical education, and advancing research through
-      responsible institutional leadership and professional service. Explore
-      the people, policies, and institutional information that guide our work.
-    </p>
-    <a className="leadership-btn" href="#contact">
-      Meet Our Leadership
-    </a>
-  </div>
+          <div className="leadership">
+            <div className="leadership-copy">
+              <p className="leadership-eyebrow">
+                Leadership and Accountability
+              </p>
+              <h2>Guided By A Commitment To Better Healthcare</h2>
+              <p className="leadership-text">
+                The University of Abuja Teaching Hospital is committed to
+                delivering healthcare, supporting medical education, and
+                advancing research through responsible institutional leadership
+                and professional service. Explore the people, policies, and
+                institutional information that guide our work.
+              </p>
+              <a className="leadership-btn" href="#contact">
+                Meet Our Leadership
+              </a>
+            </div>
 
-  <div className="leader-photo">
-    <Image
-      src={photo.cmd}
-      alt="Professor Thairu Yunusa, Chief Managing Director"
-      fill
-      sizes="(max-width: 800px) 100vw, 420px"
-      className="leader-image"
-    />
-    <div className="leader-caption">
-      <strong>Professor Thairu Yunusa</strong>
-      <p>Chief Managing Director</p>
-    </div>
-  </div>
-</div>
+            <div className="leader-photo">
+              <Image
+                src={photo.cmd}
+                alt="Professor Thairu Yunusa, Chief Managing Director"
+                fill
+                sizes="(max-width: 800px) 100vw, 420px"
+                className="leader-image"
+              />
+              <div className="leader-caption">
+                <strong>Professor Thairu Yunusa</strong>
+                <p>Chief Managing Director</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -464,14 +472,14 @@ export default function Home() {
             </div>
           </div>
           <div className="map-frame">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3941.2076637103537!2d7.060004425017986!3d8.953003291105336!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e8761a5143a33%3A0x866d7b05d20e927b!2sUniversity%20of%20Abuja%20Specialist%20Hospital!5e0!3m2!1sen!2sng!4v1795463834462!5m2!1sen!2sng"
-    title="University of Abuja Teaching Hospital location"
-    loading="lazy"
-    allowFullScreen
-    referrerPolicy="strict-origin-when-cross-origin"
-  />
-</div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3941.2076637103537!2d7.060004425017986!3d8.953003291105336!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e8761a5143a33%3A0x866d7b05d20e927b!2sUniversity%20of%20Abuja%20Specialist%20Hospital!5e0!3m2!1sen!2sng!4v1795463834462!5m2!1sen!2sng"
+              title="University of Abuja Teaching Hospital location"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+          </div>
         </div>
       </section>
 
@@ -502,14 +510,13 @@ export default function Home() {
           <div className="footer-brand">
             <a className="brand brand-light" href="#">
               <Image
-  src="/img/logo-header.png"
-  alt="UATH logo"
-  width={186}
-  height={50}
-  className="brand-mark"
-  priority
-/>
-              
+                src="/img/logo-header.png"
+                alt="UATH logo"
+                width={186}
+                height={50}
+                className="brand-mark"
+                priority
+              />
             </a>
             <p>Committed to quality healthcare, teaching and research.</p>
             <div className="socials">

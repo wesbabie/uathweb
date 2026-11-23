@@ -96,7 +96,7 @@ a {
   display: flex;
   align-items: center;
   gap: 30px;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 700;
 }
 .desktop-nav a {
@@ -117,7 +117,7 @@ a {
   color: #a43d4b;
   padding: 10px 16px;
   border-radius: 25px;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 700;
 }
 .status-dot {
@@ -380,7 +380,7 @@ a {
   margin: 0 0 6px;
 }
 .department-card p {
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.6;
   color: #617169;
   max-width: 210px;
@@ -797,6 +797,7 @@ a {
 }
 .contact-grid > div > p {
   max-width: 400px;
+  font-size: 15px;
 }
 .contact-details {
   display: grid;
@@ -836,10 +837,10 @@ a {
   display: block;
 }
 .contact-details b {
-  font-size: 11px;
+  font-size: 15px;
 }
 .contact-details small {
-  font-size: 9px;
+  font-size: 15px;
   color: #61766a;
   margin-top: 4px;
 }
@@ -869,7 +870,7 @@ a {
   margin: 0 0 14px;
 }
 .closing-cta p {
-  font-size: 11px;
+  font-size: 15px;
   color: #c5d9ce;
   margin-bottom: 25px;
 }
@@ -895,7 +896,7 @@ a {
 }
 .footer-brand > p,
 .footer-grid > div > p {
-  font-size: 10px;
+  font-size: 15px;
   line-height: 1.8;
   color: #a9c2b3;
   max-width: 220px;
@@ -914,7 +915,7 @@ a {
   place-items: center;
 }
 .footer-grid h3 {
-  font-size: 11px;
+  font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 1.4px;
   color: #fff;
@@ -922,7 +923,7 @@ a {
 }
 .footer-grid > div > a:not(.brand) {
   display: block;
-  font-size: 10px;
+  font-size: 15px;
   color: #b6cabe;
   margin: 11px 0;
 }
@@ -933,7 +934,7 @@ a {
   display: flex;
   justify-content: space-between;
   color: #8eaa9b;
-  font-size: 9px;
+  font-size: 15px;
 }
 
 @media (max-width: 800px) {
@@ -1087,7 +1088,7 @@ a {
     padding: 16px 13px;
   }
   .service-card h3 {
-    font-size: 11px;
+    font-size: 15px;
   }
   .service-card p {
     font-size: 9px;
