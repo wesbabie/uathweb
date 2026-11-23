@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "/public/img/logo-header.png";
+// import logo from "/public/img/logo-header.png";
 import {
   Activity,
   Ambulance,
@@ -29,15 +29,11 @@ import {
 } from "lucide-react";
 
 const photo = {
-  hero: "img/Hero-slider.png",
-  hospital:"img/image (about section).png",
+  hero: "/img/Hero-slider.png",
+  hospital: "/img/about.png",   // renamed file
   news: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85",
-  leader:
-    "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=700&q=85",
-  cmd: "img/cmd.jpeg",
-  hand:
-    "img/mockups.png",
-  map: "https://images.unsplash.com/photo-1524666041070-9b876833b3c4?auto=format&fit=crop&w=900&q=85",
+  cmd: "/img/cmd.jpeg",
+  hand: "/img/mockups.png",
 };
 
 const stats = [
@@ -158,11 +154,13 @@ export default function Home() {
           <div className="container nav-wrap">
             <a className="brand" href="#" aria-label="UATH home">
               <Image
-                src={logo}
-                alt="UATH logo"
-                className="brand-mark"
-                priority
-              />
+  src="/img/logo-header.png"
+  alt="UATH logo"
+  width={186}
+  height={50}
+  className="brand-mark"
+  priority
+/>
             </a>
             <nav className="desktop-nav">
               <a href="#home">Home</a>
@@ -504,11 +502,13 @@ export default function Home() {
           <div className="footer-brand">
             <a className="brand brand-light" href="#">
               <Image
-                src={logo}
-                alt="UATH logo"
-                className="brand-mark"
-                priority
-              />
+  src="/img/logo-header.png"
+  alt="UATH logo"
+  width={186}
+  height={50}
+  className="brand-mark"
+  priority
+/>
               
             </a>
             <p>Committed to quality healthcare, teaching and research.</p>
