@@ -28,6 +28,7 @@ import {
   Youtube,
 } from "lucide-react";
 import SiteHeader from "./components/SiteHeader";
+import ScrollToTop from "./components/ScrollToTop";
 
 const photo = {
   hero: "/img/Hero-slider.png",
@@ -526,6 +527,7 @@ export default function Home() {
           </span>
           <span>Privacy Policy&nbsp;&nbsp; Terms of Use</span>
         </div>
+        <ScrollToTop/>
       </footer>
     </main>
   );
