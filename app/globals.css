@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 :root {
   --green: #159b61;
   --deep: #06291b;
@@ -17,16 +18,32 @@ body {
   margin: 0;
   background: var(--pale);
   color: var(--ink);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Google Sans Flex", sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
 }
 a {
   color: inherit;
   text-decoration: none;
 }
+
+/* ===== Container (grows on larger screens) ===== */
 .container {
-  width: min(1160px, calc(100% - 64px));
+  width: min(1320px, calc(100% - 64px));
   margin: auto;
 }
+@media (min-width: 1600px) {
+  .container {
+    width: min(1500px, calc(100% - 120px));
+  }
+}
+@media (min-width: 1920px) {
+  .container {
+    width: min(1700px, calc(100% - 160px));
+  }
+}
+
+/* ===== Utility bar ===== */
 .utility {
   height: 50px;
   background: #05281b;
@@ -51,22 +68,19 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-top: 76px; /* keeps hero content clear of the sticky header */
 }
+
+/* ===== Header ===== */
 .site-header {
   height: 76px;
   position: sticky;
   top: 0;
   z-index: 50;
-  margin-bottom: -76px;      /* lets the hero slide up behind the header */
+  margin-bottom: -76px; /* lets the hero slide up behind the header */
   background: transparent;
   transition: background 0.25s ease, box-shadow 0.25s ease;
 }
-
-.hero-wrap {
-  padding-top: 76px;         /* keeps hero content clear of the header */
-}
-
-/* white state after scrolling */
 .site-header.is-scrolled {
   background: #fff;
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
@@ -79,16 +93,6 @@ a {
 }
 .site-header.is-scrolled .mobile-menu {
   color: var(--ink);
-}
-
-@media (max-width: 800px) {
-  .site-header {
-    height: 66px;
-    margin-bottom: -66px;
-  }
-  .hero-wrap {
-    padding-top: 66px;
-  }
 }
 .nav-wrap {
   height: 100%;
@@ -163,10 +167,13 @@ a {
   border: 0;
   background: none;
   color: #fff;
+  cursor: pointer;
+  padding: 6px;
 }
+
+/* ===== Hero ===== */
 .hero {
   min-height: 560px;
-  /* background: none; background image now lives on .hero-wrap */
   display: flex;
   align-items: center;
   text-align: center;
@@ -195,8 +202,8 @@ a {
 }
 .hero-tag {
   display: inline-block;
-  color:black;
-  background: rgba(255, 255, 255, 0.50);
+  color: black;
+  background: rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 30px;
   padding: 9px 25px;
@@ -242,6 +249,8 @@ a {
   background: var(--green);
   color: white;
 }
+
+/* ===== Stats ===== */
 .stats {
   background: #fff;
   padding: 25px 0;
@@ -280,6 +289,8 @@ a {
   font-size: 11px;
   margin-top: 4px;
 }
+
+/* ===== About ===== */
 .section {
   padding: 92px 0;
 }
@@ -335,6 +346,8 @@ a {
   object-fit: cover;
   display: block;
 }
+
+/* ===== Departments ===== */
 .department-heading {
   margin: 85px 0 25px;
 }
@@ -422,6 +435,8 @@ a {
   bottom: 18px;
   color: #178b59;
 }
+
+/* ===== Services ===== */
 .services-section {
   background: #d8f2e5;
   padding: 85px 0;
@@ -475,56 +490,19 @@ a {
   bottom: 16px;
   color: #178b59;
 }
-.portal-section {
-  background: white;
-  padding: 80px 0;
-  overflow: hidden;
-}
-.portal-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 70px;
-}
-.portal-copy h2 {
-  font-size: clamp(25px, 3vw, 35px);
-  line-height: 1.2;
-  max-width: 520px;
-  margin: 0 0 20px;
-}
-.portal-copy ul {
-  padding: 0;
-  margin: 20px 0 25px;
-  list-style: none;
-  display: grid;
-  gap: 12px;
-}
-.portal-copy li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 12px;
-  color: #53665c;
-}
-.portal-copy li svg {
-  color: var(--green);
-}
-/* ===== Patient Portal section =====
-   Replace your old .portal-* and .phone-* rules with this block. */
 
+/* ===== Patient Portal ===== */
 .portal-section {
   background: #fff;
   padding: 90px 0 0;
   overflow: hidden;
 }
-
 .portal-grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
   gap: 40px;
 }
-
 .portal-eyebrow {
   font-size: 20px;
   font-weight: 500;
@@ -533,7 +511,6 @@ a {
   color: var(--ink);
   margin: 0 0 22px;
 }
-
 .portal-copy h2 {
   font-size: clamp(28px, 3.6vw, 44px);
   line-height: 1.22;
@@ -543,7 +520,6 @@ a {
   max-width: 700px;
   margin: 0 0 36px;
 }
-
 .portal-copy ul {
   list-style: none;
   padding: 0;
@@ -551,7 +527,6 @@ a {
   display: grid;
   gap: 26px;
 }
-
 .portal-copy li {
   display: flex;
   align-items: center;
@@ -559,12 +534,10 @@ a {
   font-size: 19px;
   color: var(--ink);
 }
-
 .portal-copy li svg {
   color: #14251d;
   flex-shrink: 0;
 }
-
 .portal-copy p:not(.portal-eyebrow) {
   font-size: 19px;
   line-height: 1.6;
@@ -572,7 +545,6 @@ a {
   max-width: none;
   margin: 0 0 14px;
 }
-
 .portal-btn {
   display: inline-flex;
   align-items: center;
@@ -589,41 +561,16 @@ a {
   background: #148f55;
   transform: translateY(-2px);
 }
-
 .portal-visual {
-  order: -1;
   position: relative;
   height: 580px;
 }
-
 .portal-image {
   object-fit: contain;
   object-position: right bottom;
 }
 
-@media (max-width: 800px) {
-  .portal-section {
-    padding: 60px 0 0;
-    /* display: flex; */
-    /* flex-direction: column-reverse; */
-  }
-  .portal-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  .portal-eyebrow {
-    font-size: 13px;
-    letter-spacing: 4px;
-  }
-  .portal-copy li,
-  .portal-copy p:not(.portal-eyebrow),
-  .portal-btn {
-    font-size: 16px;
-  }
-  .portal-visual {
-    height: 280px;
-  }
-}
+/* ===== News ===== */
 .news-section {
   padding-top: 80px;
 }
@@ -696,6 +643,8 @@ a {
   line-height: 1.45;
   margin: 7px 0;
 }
+
+/* ===== Leadership ===== */
 .leadership {
   margin-top: 80px;
   background: #22b066;
@@ -707,7 +656,6 @@ a {
   gap: 50px;
   align-items: center;
 }
-
 .leadership-eyebrow {
   font-size: 18px;
   font-weight: 500;
@@ -716,7 +664,6 @@ a {
   color: #fff;
   margin: 0 0 18px;
 }
-
 .leadership h2 {
   font-size: 38px;
   line-height: 1.2;
@@ -724,7 +671,6 @@ a {
   max-width: 540px;
   margin: 0 0 24px;
 }
-
 .leadership-text {
   font-size: 18px;
   line-height: 2;
@@ -732,7 +678,6 @@ a {
   max-width: 540px;
   margin: 0 0 26px;
 }
-
 .leadership-btn {
   display: inline-flex;
   align-items: center;
@@ -748,8 +693,6 @@ a {
   background: #fff;
   transform: translateY(-2px);
 }
-
-/* photo */
 .leader-photo {
   position: relative;
   width: 410px;
@@ -773,8 +716,6 @@ a {
   );
   pointer-events: none;
 }
-
-/* caption */
 .leader-caption {
   position: absolute;
   left: 28px;
@@ -794,28 +735,7 @@ a {
   color: #fff;
 }
 
-@media (max-width: 800px) {
-  .leadership {
-    grid-template-columns: 1fr;
-    padding: 40px 28px;
-    border-radius: 22px;
-  }
-  .leadership-eyebrow {
-    font-size: 13px;
-    letter-spacing: 4px;
-  }
-  .leadership h2 {
-    font-size: 28px;
-  }
-  .leadership-text,
-  .leadership-btn {
-    font-size: 16px;
-  }
-  .leader-photo {
-    width: 100%;
-    height: 420px;
-  }
-}
+/* ===== Contact ===== */
 .contact-section {
   background: #d8f2e5;
   padding: 80px 0;
@@ -885,13 +805,14 @@ a {
   position: relative;
   background: #fff;
 }
-
 .map-frame iframe {
   width: 100%;
   height: 100%;
   border: 0;
   display: block;
 }
+
+/* ===== Closing CTA + Footer ===== */
 .closing-cta {
   background: #05291b;
   color: white;
@@ -910,7 +831,7 @@ a {
 }
 .footer {
   background: #05291b;
-  border-top:0.5px solid #214433;
+  border-top: 0.5px solid #214433;
   color: #d8e8df;
   padding: 55px 0 20px;
 }
@@ -972,9 +893,113 @@ a {
   font-size: 15px;
 }
 
+/* ===== Mobile navigation panel (hidden by default) ===== */
+.mobile-panel {
+  display: none;
+}
+
+/* ===== Scroll to top button ===== */
+.scroll-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 60;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(5, 41, 27, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s,
+    background 0.2s ease;
+}
+.scroll-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll-top:hover {
+  background: #0f7d4c;
+}
+
+/* ===================================================== */
+/* ===== Large screens (scale up fixed-size pieces) ===== */
+/* ===================================================== */
+@media (min-width: 1600px) {
+  .hero {
+    min-height: 680px;
+  }
+  .hero h1 {
+    font-size: 76px;
+  }
+  .hero-copy {
+    max-width: 720px;
+    font-size: 20px;
+  }
+
+  .desktop-nav {
+    font-size: 19px;
+    gap: 38px;
+  }
+
+  .about-image {
+    height: 440px;
+  }
+  .about-copy p {
+    max-width: 640px;
+  }
+
+  .department-card {
+    min-height: 260px;
+  }
+  .service-card {
+    min-height: 200px;
+  }
+
+  .portal-visual {
+    height: 680px;
+  }
+
+  .leadership {
+    padding: 80px 110px;
+    grid-template-columns: 1fr 460px;
+  }
+  .leader-photo {
+    width: 460px;
+    height: 560px;
+  }
+
+  .map-frame {
+    height: 420px;
+  }
+}
+
+/* ===================================================== */
+/* ===== Tablet / mobile (800px and below) ============= */
+/* ===================================================== */
 @media (max-width: 800px) {
   .container {
     width: min(100% - 40px, 600px);
+  }
+
+  /* header */
+  .site-header {
+    height: 66px;
+    margin-bottom: -66px;
+  }
+  .hero-wrap {
+    padding-top: 66px;
+  }
+  .brand-mark {
+    width: 150px;
+    height: 40px;
   }
   .desktop-nav,
   .nav-portal {
@@ -983,20 +1008,63 @@ a {
   .mobile-menu {
     display: block;
   }
-  .site-header {
-    height: 66px;
+
+  /* mobile menu panel */
+  .mobile-panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    display: grid;
+    gap: 4px;
+    padding: 0 20px;
+    background: rgba(5, 41, 27, 0.97);
+    backdrop-filter: blur(6px);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
   }
+  .mobile-panel.is-open {
+    max-height: 420px;
+    padding: 14px 20px 22px;
+  }
+  .mobile-panel a {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 14px 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .mobile-panel a:hover {
+    color: #a43d4b;
+  }
+  .mobile-panel .mobile-portal {
+    margin-top: 14px;
+    text-align: center;
+    background: #fff5f6;
+    color: #a43d4b;
+    border: 0;
+    border-radius: 30px;
+    padding: 14px;
+  }
+
+  /* hero */
   .hero {
     min-height: 500px;
   }
-  .hero-actions>.btn{
-  gap: 9px;
-  padding: 13px 13px;
+  .hero-actions > .btn {
+    gap: 9px;
+    padding: 13px 13px;
   }
+
+  /* stats */
   .stats-grid {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 22px;
   }
+
+  /* shared two-column grids */
   .about-grid,
   .portal-grid,
   .contact-grid {
@@ -1006,6 +1074,8 @@ a {
   .about-image {
     height: 300px;
   }
+
+  /* departments + services */
   .department-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1019,9 +1089,29 @@ a {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .phone-visual {
-    height: 360px;
+
+  /* portal: image goes on top and gets smaller */
+  .portal-section {
+    padding: 60px 0 0;
   }
+  .portal-eyebrow {
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+  .portal-copy li,
+  .portal-copy p:not(.portal-eyebrow),
+  .portal-btn {
+    font-size: 16px;
+  }
+  .portal-visual {
+    order: -1;
+    height: 280px;
+  }
+  .portal-image {
+    object-position: center bottom;
+  }
+
+  /* news */
   .news-heading {
     display: block;
   }
@@ -1034,14 +1124,31 @@ a {
   .featured-news {
     min-height: 280px;
   }
+
+  /* leadership */
   .leadership {
-    grid-template-columns: 1fr 200px;
-    padding: 30px;
+    grid-template-columns: 1fr;
+    padding: 40px 28px;
+    border-radius: 22px;
     gap: 20px;
   }
-  .leader-photo {
-    height: 220px;
+  .leadership-eyebrow {
+    font-size: 13px;
+    letter-spacing: 4px;
   }
+  .leadership h2 {
+    font-size: 28px;
+  }
+  .leadership-text,
+  .leadership-btn {
+    font-size: 16px;
+  }
+  .leader-photo {
+    width: 100%;
+    height: 420px;
+  }
+
+  /* contact + footer */
   .contact-details > div {
     width: 100%;
     margin-left: 0 !important;
@@ -1053,7 +1160,19 @@ a {
     grid-template-columns: repeat(2, 1fr);
     gap: 35px;
   }
+
+  /* scroll-to-top */
+  .scroll-top {
+    right: 16px;
+    bottom: 16px;
+    width: 42px;
+    height: 42px;
+  }
 }
+
+/* ===================================================== */
+/* ===== Small phones (480px and below) ================ */
+/* ===================================================== */
 @media (max-width: 480px) {
   .container {
     width: calc(100% - 32px);
@@ -1135,17 +1254,6 @@ a {
   .portal-section {
     padding: 65px 0;
   }
-  .phone-visual {
-    height: 330px;
-  }
-  .phone-shell {
-    width: 175px;
-    height: 330px;
-  }
-  .phone-hand {
-    width: 200px;
-    height: 160px;
-  }
   .news-section {
     padding-top: 65px;
   }
@@ -1192,117 +1300,5 @@ a {
     gap: 12px;
     flex-direction: column;
     line-height: 1.6;
-  }
-}
-body {
-  font-family: "Google Sans Flex", sans-serif;
-  font-weight: 400;
-  font-optical-sizing: auto;
-}
-/* ===== Mobile navigation =====
-   Add this at the END of globals.css */
-
-/* the panel is hidden everywhere by default */
-.mobile-panel {
-  display: none;
-}
-
-.mobile-menu {
-  cursor: pointer;
-  padding: 6px;
-}
-
-@media (max-width: 800px) {
-  .brand-mark {
-    width: 150px;
-    height: 40px;
-  }
-
-  .mobile-panel {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 20;
-    display: grid;
-    gap: 4px;
-    padding: 0 20px;
-    background: rgba(5, 41, 27, 0.97);
-    backdrop-filter: blur(6px);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-  }
-
-  .mobile-panel.is-open {
-    max-height: 420px;
-    padding: 14px 20px 22px;
-  }
-
-  .mobile-panel a {
-    color: #fff;
-    font-size: 17px;
-    font-weight: 600;
-    padding: 14px 4px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  }
-
-  .mobile-panel a:hover {
-    color: #a43d4b;
-  }
-
-  .mobile-panel .mobile-portal {
-    margin-top: 14px;
-    text-align: center;
-    /* justify-items:center; */
-  border: 1px solid #e4c7cb;
-  background: #fff5f6;
-  color: #a43d4b;
-    border: 0;
-    border-radius: 30px;
-    padding: 14px;
-  }
-}
-
-.scroll-top {
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
-  z-index: 60;
-  width: 46px;
-  height: 46px;
-  border: 0;
-  border-radius: 50%;
-  background: var(--green);
-  color: #fff;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  box-shadow: 0 6px 18px rgba(5, 41, 27, 0.3);
-
-  /* hidden until the page is scrolled */
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(12px);
-  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s,
-    background 0.2s ease;
-}
-
-.scroll-top.is-visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.scroll-top:hover {
-  background: #0f7d4c;
-}
-
-@media (max-width: 800px) {
-  .scroll-top {
-    right: 16px;
-    bottom: 16px;
-    width: 42px;
-    height: 42px;
   }
 }
