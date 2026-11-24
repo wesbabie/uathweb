@@ -175,8 +175,8 @@ export default function Home() {
               <a className="btn btn-light" href="#services">
                 Explore Services <ArrowRight size={15} />
               </a>
-              <a className="btn btn-outline" href="#about">
-                Who We Are
+              <a className="btn btn-outline" href="#departments">
+                Find a department
               </a>
             </div>
           </div>
