@@ -316,7 +316,7 @@ export default function Home() {
               src="/img/mockups.png"
               alt="UATH patient portal app on a phone"
               fill
-              sizes="(max-width: 800px) 100vw, 50vw"
+              sizes="(max-width: 800px) 80vw, 50vw"
               className="portal-image"
             />
           </div>
