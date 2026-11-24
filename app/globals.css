@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 :root {
   --green: #159b61;
   --deep: #06291b;
@@ -1161,4 +1160,67 @@ body {
   font-family: "Google Sans Flex", sans-serif;
   font-weight: 400;
   font-optical-sizing: auto;
+}
+/* ===== Mobile navigation =====
+   Add this at the END of globals.css */
+
+/* the panel is hidden everywhere by default */
+.mobile-panel {
+  display: none;
+}
+
+.mobile-menu {
+  cursor: pointer;
+  padding: 6px;
+}
+
+@media (max-width: 800px) {
+  .brand-mark {
+    width: 150px;
+    height: 40px;
+  }
+
+  .mobile-panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    display: grid;
+    gap: 4px;
+    padding: 0 20px;
+    background: rgba(5, 41, 27, 0.97);
+    backdrop-filter: blur(6px);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+
+  .mobile-panel.is-open {
+    max-height: 420px;
+    padding: 14px 20px 22px;
+  }
+
+  .mobile-panel a {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 14px 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .mobile-panel a:hover {
+    color: #a43d4b;
+  }
+
+  .mobile-panel .mobile-portal {
+    margin-top: 14px;
+    text-align: center;
+  border: 1px solid #e4c7cb;
+  background: #fff5f6;
+  color: #a43d4b;
+    border: 0;
+    border-radius: 30px;
+    padding: 14px;
+  }
 }

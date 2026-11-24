@@ -27,6 +27,7 @@ import {
   WalletCards,
   Youtube,
 } from "lucide-react";
+import SiteHeader from "./components/SiteHeader";
 
 const photo = {
   hero: "/img/Hero-slider.png",
@@ -150,40 +151,7 @@ export default function Home() {
           backgroundImage: `linear-gradient(90deg, rgba(5,66,43,.78), rgba(10,105,70,.58)), url(${photo.hero})`,
         }}
       >
-        <header className="site-header">
-          <div className="container nav-wrap">
-            <a className="brand" href="#" aria-label="UATH home">
-              <Image
-                src="/img/logo-header.png"
-                alt="UATH logo"
-                width={186}
-                height={50}
-                className="brand-mark"
-                priority
-              />
-            </a>
-            <nav className="desktop-nav">
-              <a href="#home">Home</a>
-              <a href="#about">
-                About Us <ChevronDown size={12} />
-              </a>
-              <a href="#departments">
-                Resources <ChevronDown size={12} />
-              </a>
-              <a href="#services">Welfare</a>
-              <a href="#contact">Contact</a>
-            </nav>
-            <a className="nav-portal" href="#portal">
-              <span className="utility-inner"> 
-              <Phone/>
-              Patient Portal
-              </span>
-            </a>
-            <button className="mobile-menu" aria-label="Open menu">
-              <Menu />
-            </button>
-          </div>
-        </header>
+        <SiteHeader />
 
         <section className="hero" id="home">
           <div className="container hero-content">
