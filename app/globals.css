@@ -1216,6 +1216,7 @@ body {
   .mobile-panel .mobile-portal {
     margin-top: 14px;
     text-align: center;
+    /* justify-items:center; */
   border: 1px solid #e4c7cb;
   background: #fff5f6;
   color: #a43d4b;

@@ -69,7 +69,7 @@ export default function SiteHeader() {
           </a>
         ))}
         <a className="mobile-portal" href="#portal" onClick={close}>
-          Patient Portal
+          Emergency Calls
         </a>
       </nav>
     </header>
