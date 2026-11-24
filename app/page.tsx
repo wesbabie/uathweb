@@ -314,12 +314,12 @@ export default function Home() {
           <div className="portal-visual">
             {/* change hand.png to your actual filename in public/img/ */}
             <Image
-              src="/img/mockups.png"
-              alt="UATH patient portal app on a phone"
-              fill
-              sizes="(max-width: 800px) 80vw, 50vw"
-              className="portal-image"
-            />
+            src="/img/mockups.png"
+            alt="UATH patient portal app on a phone"
+            fill
+            sizes="(max-width: 800px) 100vw, 50vw"
+            className="portal-image"
+          />
           </div>
         </div>
       </section>
