@@ -41,8 +41,8 @@ export default function SiteHeader() {
 
         <a className="nav-portal" href="#portal">
           <span className="utility-inner">
-            <Phone />
-            Patient Portal
+            <Phone/>
+            Emergency Call
           </span>
         </a>
 
