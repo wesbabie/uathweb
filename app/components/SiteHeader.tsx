@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
+
 
 const links = [
   { label: "Home", href: "#home" },
@@ -14,10 +15,19 @@ const links = [
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
-  const close = () => setOpen(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const close = () => setOpen(false);   // <- add this back
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="site-header">
+    <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
       <div className="container nav-wrap">
         <a className="brand" href="#" aria-label="UATH home">
           <Image

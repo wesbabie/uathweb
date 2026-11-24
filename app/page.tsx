@@ -144,14 +144,14 @@ export default function Home() {
           </span>
         </div>
       </div>
-
+      <SiteHeader />
       <div
         className="hero-wrap"
         style={{
           backgroundImage: `linear-gradient(90deg, rgba(5,66,43,.78), rgba(10,105,70,.58)), url(${photo.hero})`,
         }}
       >
-        <SiteHeader />
+        
 
         <section className="hero" id="home">
           <div className="container hero-content">

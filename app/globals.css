@@ -52,12 +52,43 @@ a {
   background-position: center;
   background-repeat: no-repeat;
 }
-
 .site-header {
   height: 76px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  margin-bottom: -76px;      /* lets the hero slide up behind the header */
   background: transparent;
-  position: relative;
-  z-index: 5;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-wrap {
+  padding-top: 76px;         /* keeps hero content clear of the header */
+}
+
+/* white state after scrolling */
+.site-header.is-scrolled {
+  background: #fff;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
+}
+.site-header.is-scrolled .desktop-nav a {
+  color: var(--ink);
+}
+.site-header.is-scrolled .desktop-nav a:hover {
+  color: var(--green);
+}
+.site-header.is-scrolled .mobile-menu {
+  color: var(--ink);
+}
+
+@media (max-width: 800px) {
+  .site-header {
+    height: 66px;
+    margin-bottom: -66px;
+  }
+  .hero-wrap {
+    padding-top: 66px;
+  }
 }
 .nav-wrap {
   height: 100%;
