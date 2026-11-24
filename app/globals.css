@@ -27,19 +27,226 @@ a {
   text-decoration: none;
 }
 
-/* ===== Container (grows on larger screens) ===== */
+/* ===== Wider container =====
+   1) Replace BOTH the old ".container" rule and its two
+      @media (min-width: 1600px / 1920px) container blocks with this.
+   2) Replace the old "@media (min-width: 1600px)" scaling block
+      (the one starting with ".hero { min-height: 680px; }") with the
+      two blocks at the bottom of this file. */
+
 .container {
-  width: min(1320px, calc(100% - 64px));
+  width: min(1400px, calc(100% - 64px));
   margin: auto;
 }
-@media (min-width: 1600px) {
+@media (min-width: 1440px) {
   .container {
-    width: min(1500px, calc(100% - 120px));
+    width: min(1640px, calc(100% - 120px));
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1800px) {
   .container {
-    width: min(1700px, calc(100% - 160px));
+    width: min(1840px, calc(100% - 160px));
+  }
+}
+@media (min-width: 2200px) {
+  .container {
+    width: min(2100px, calc(100% - 240px));
+  }
+}
+
+/* ===== Scale content up so the wider container doesn't look sparse ===== */
+@media (min-width: 1440px) {
+  .utility {
+    font-size: 12px;
+  }
+
+  .desktop-nav {
+    font-size: 19px;
+    gap: 38px;
+  }
+  .brand-mark {
+    width: 220px;
+    height: 60px;
+  }
+  .site-header,
+  .hero-wrap {
+    --header-h: 88px;
+  }
+  .site-header {
+    height: 88px;
+    margin-bottom: -88px;
+  }
+  .hero-wrap {
+    padding-top: 88px;
+  }
+
+  .hero {
+    min-height: 680px;
+  }
+  .hero h1 {
+    font-size: 76px;
+  }
+  .hero-copy {
+    max-width: 760px;
+    font-size: 20px;
+  }
+  .btn {
+    font-size: 17px;
+    padding: 15px 28px;
+  }
+
+  .stat strong {
+    font-size: 28px;
+  }
+  .stat small {
+    font-size: 13px;
+  }
+  .stat-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 2.6px;
+  }
+  .about-copy h2,
+  .section-heading h2,
+  .news-heading h2,
+  .contact-grid h2 {
+    font-size: 44px;
+  }
+  .about-copy p,
+  .news-heading > p,
+  .contact-grid > div > p {
+    font-size: 18px;
+    max-width: 680px;
+  }
+  .about-image {
+    height: 460px;
+  }
+
+  .department-card {
+    min-height: 270px;
+    padding: 26px;
+  }
+  .department-card h3 {
+    font-size: 19px;
+  }
+  .department-card p {
+    font-size: 16px;
+    max-width: 260px;
+  }
+  .department-art {
+    font-size: 78px;
+  }
+
+  .section-heading p {
+    font-size: 20px;
+  }
+  .service-card {
+    min-height: 220px;
+    padding: 28px 24px;
+  }
+  .service-card h3 {
+    font-size: 18px;
+  }
+  .service-card p {
+    font-size: 15px;
+    max-width: 260px;
+  }
+  .service-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .portal-visual {
+    height: 680px;
+  }
+
+  .featured-news {
+    min-height: 420px;
+  }
+  .featured-news h3 {
+    font-size: 30px;
+  }
+  .news-item {
+    grid-template-columns: 150px 1fr;
+  }
+  .news-item img {
+    height: 120px;
+  }
+  .news-item b {
+    font-size: 16px;
+  }
+  .news-item small,
+  .news-item em {
+    font-size: 12px;
+  }
+
+  .leadership {
+    padding: 80px 110px;
+    grid-template-columns: 1fr 480px;
+  }
+  .leadership h2 {
+    font-size: 46px;
+    max-width: 640px;
+  }
+  .leadership-text {
+    max-width: 640px;
+  }
+  .leader-photo {
+    width: 480px;
+    height: 580px;
+  }
+
+  .map-frame {
+    height: 440px;
+  }
+  .contact-details b,
+  .contact-details small {
+    font-size: 17px;
+  }
+
+  .closing-cta h2 {
+    font-size: 40px;
+  }
+  .closing-cta p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .hero {
+    min-height: 760px;
+  }
+  .hero h1 {
+    font-size: 88px;
+  }
+  .hero-copy {
+    max-width: 860px;
+    font-size: 22px;
+  }
+  .about-image {
+    height: 540px;
+  }
+  .department-card {
+    min-height: 310px;
+  }
+  .service-card {
+    min-height: 250px;
+  }
+  .portal-visual {
+    height: 760px;
+  }
+  .featured-news {
+    min-height: 480px;
+  }
+  .leader-photo {
+    height: 640px;
+  }
+  .map-frame {
+    height: 500px;
   }
 }
 
