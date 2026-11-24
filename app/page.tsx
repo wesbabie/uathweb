@@ -533,22 +533,22 @@ export default function Home() {
           </div>
           <div>
             <h3>Explore</h3>
-            <a href="#about">About Us</a>
-            <a href="#departments">Departments</a>
-            <a href="#services">Medical Services</a>
-            <a href="#contact">Contact</a>
+            <a href="#about">Home</a>
+            <a href="#departments">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Departments</a>
+            <a href="#contact">Management</a>
+            <a href="#contact">Welfare</a>
           </div>
           <div>
             <h3>Information</h3>
-            <a href="#portal">Patient Portal</a>
-            <a href="#contact">News & Updates</a>
-            <a href="#contact">FAQs</a>
-            <a href="#contact">Careers</a>
+            <a href="#portal">Latest News</a>
+            <a href="#contact">Announcements</a>
           </div>
           <div>
             <h3>Contact</h3>
             <p>Gwagwalada, Abuja, Nigeria</p>
-            <p>+234 (0) 000 000 0000</p>
+            <p>+234 704 004 5614</p>
             <p>info@uath.gov.ng</p>
           </div>
         </div>

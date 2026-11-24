@@ -877,6 +877,7 @@ a {
 }
 .footer {
   background: #05291b;
+  border-top:0.5px solid #214433;
   color: #d8e8df;
   padding: 55px 0 20px;
 }
