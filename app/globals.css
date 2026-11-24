@@ -560,8 +560,9 @@ a {
 }
 
 .portal-visual {
+  order: -1;
   position: relative;
-  height: 620px;
+  height: 180px;
 }
 
 .portal-image {
@@ -572,6 +573,8 @@ a {
 @media (max-width: 800px) {
   .portal-section {
     padding: 60px 0 0;
+    /* display: flex; */
+    /* flex-direction: column-reverse; */
   }
   .portal-grid {
     grid-template-columns: 1fr;
@@ -954,6 +957,10 @@ a {
   }
   .hero {
     min-height: 500px;
+  }
+  .hero-actions>.btn{
+  gap: 9px;
+  padding: 13px 13px;
   }
   .stats-grid {
     grid-template-columns: repeat(3, 1fr);
